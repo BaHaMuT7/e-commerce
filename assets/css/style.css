@@ -1,16 +1,19 @@
 :root {
     /* Fuentes */
-    --fuente-titulo-general: 18px Arial, sans-serif;
-    --fuente-titulo-categoria: 14px Arial, sans-serif;
+    --fuente-titulo-general: 20px Arial, sans-serif;
+    --fuente-titulo-categoria: bolder 20px  Arial, sans-serif;
+    --fuente-p-categoria: 16px Arial, sans-serif;
 
     /* Colores fondo */
     --bg-cabecera: rgb(37, 82, 123);
     --bg-central: rgb(231, 231, 231);
     --bg-footer: #FFF;
+    --bg-producto: #FFF;
 
     /* Colores objeto (letra) */
     --text-white: #FFF;
     --text-black: #000;
+    --text-gray: #808080;
 
 }
 
@@ -22,6 +25,8 @@
     grid-template-areas:    "cabecera cabecera cabecera"
                             "categorias grilla grilla"
                             "pie pie pie";
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 2fr 30fr 1fr ;
 }
 
 .container > * {
@@ -42,13 +47,46 @@ header {
 aside {
     grid-area: categorias;
     background-color: var(--bg-central);
+    flex-direction: column;
+}
+
+aside p {
+    margin-block-start: 0;
+    margin-block-end: 0.5rem;
+    margin-left: 0.5rem;
+    font: var(--fuente-p-categoria);
+    color: var(--text-black);
+}
+
+aside h2 {
+    margin-left: 0.5rem;
+    font: var(--fuente-titulo-categoria);
+    color: var(--text-black);
+}
+
+.unidad {
+    color: var(--text-gray);
 }
 
 /* main */
 main {
     grid-area: grilla;
     background-color: var(--bg-central);
+    flex-wrap: wrap;
+    column-gap: 1rem;
+}
 
+article {
+    display: flex;
+    flex-direction: column;
+    height: 650px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.producto {
+    background-color: var(--bg-producto);
 }
 
 /* footer */

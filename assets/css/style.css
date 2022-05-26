@@ -1,24 +1,60 @@
+:root {
+    /* Fuentes */
+    --fuente-titulo-general: 18px Arial, sans-serif;
+    --fuente-titulo-categoria: 14px Arial, sans-serif;
+
+    /* Colores fondo */
+    --bg-cabecera: rgb(37, 82, 123);
+    --bg-central: rgb(231, 231, 231);
+    --bg-footer: #FFF;
+
+    /* Colores objeto (letra) */
+    --text-white: #FFF;
+    --text-black: #000;
+
+}
+
 /* GRID container */
 .container {
     display: grid;
+    height: 100vh;
+    width: 100vw;
+    grid-template-areas:    "cabecera cabecera cabecera"
+                            "categorias grilla grilla"
+                            "pie pie pie";
+}
+
+.container > * {
+    display: flex;
 }
 
 /* header */
 header {
-    
+    grid-area: cabecera;
+    background-color: var(--bg-cabecera);
+    justify-content: center;
+    align-items: center;
+    font: var(--fuente-titulo-general);
+    color: var(--text-white);
 }
 
 /* aside */
 aside {
-
+    grid-area: categorias;
+    background-color: var(--bg-central);
 }
 
 /* main */
 main {
+    grid-area: grilla;
+    background-color: var(--bg-central);
 
 }
 
 /* footer */
 footer {
-
+    grid-area: pie;
+    background-color: var(--bg-footer);
+    justify-content: center;
+    align-items: center;
 }

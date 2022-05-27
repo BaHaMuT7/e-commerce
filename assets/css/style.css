@@ -10,6 +10,7 @@
     --bg-footer: #FFF;
     --bg-producto: #FFF;
     --bg-boton-producto: rgb(37, 82, 123);
+    --bg-boton-producto-hover: rgb(54, 91, 125);
 
     /* Colores objeto (letra) */
     --text-white: #FFF;
@@ -118,6 +119,18 @@ article button {
     width: 100%;
     height: 10%;
     margin-top: 1rem;
+}
+
+article:hover{
+    box-shadow: 0 0 10px var(--bg-boton-producto);
+}
+
+article:hover img{
+    transform: scale(0.5);
+}
+
+article button:hover {
+    background-color: var(--bg-boton-producto-hover);
 }
 
 .producto {

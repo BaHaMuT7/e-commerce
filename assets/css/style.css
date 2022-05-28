@@ -31,12 +31,9 @@
     grid-template-rows: 2fr 30fr 1fr ;
 }
 
-.container > * {
-    display: flex;
-}
-
 /* header */
 header {
+    display: flex;
     grid-area: cabecera;
     background-color: var(--bg-cabecera);
     justify-content: center;
@@ -47,6 +44,7 @@ header {
 
 /* aside */
 aside {
+    display: flex;
     grid-area: categorias;
     background-color: var(--bg-central);
     flex-direction: column;
@@ -74,15 +72,15 @@ aside h2 {
 main {
     grid-area: grilla;
     background-color: var(--bg-central);
+    width: 100%;
 }
 
 .grilla-productos {
-    max-width: 100%;
     margin-top: 1rem;
     margin-bottom: 1rem;
-
+    max-width: 100%;
     display: grid;
-    grid-template-columns: repeat(auto-fit, 469px);
+    grid-template-columns: repeat(auto-fill, 469px);
     grid-gap: 1rem;
 }
 
@@ -141,6 +139,7 @@ article button:hover {
 
 /* footer */
 footer {
+    display: flex;
     grid-area: pie;
     background-color: var(--bg-footer);
     justify-content: center;

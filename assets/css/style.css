@@ -1,9 +1,9 @@
 /* Área declarativa */
 :root {
     /* Fuentes */
-    --fuente-titulo-general: 20px Arial, sans-serif;
-    --fuente-titulo-categoria: bolder 20px Arial, sans-serif;
-    --fuente-p-categoria: 16px Arial, sans-serif;
+    --fuente-titulo-general: 1.25rem Arial, sans-serif;
+    --fuente-titulo-categoria: bolder 1.25rem Arial, sans-serif;
+    --fuente-p-categoria: 1rem Arial, sans-serif;
 
     /* Colores fondo */
     --bg-cabecera: rgb(37, 82, 123);
